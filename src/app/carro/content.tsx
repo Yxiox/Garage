@@ -39,7 +39,7 @@ interface Props {
   setCars: React.Dispatch<React.SetStateAction<Car[]>>;
 }
 
-export default function Content({ cars, colors, models, setCars }: Props) {
+export default function Content({ cars, colors, setCars }: Props) {
   const handleCorChange = async (
     id: number,
     placa: string,
