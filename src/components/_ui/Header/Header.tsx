@@ -19,8 +19,8 @@ import { AppUtils } from "@/shared";
 
 const pages = [
   { name: "Home", path: AppUtils.HOME_PATH },
+  { name: "Veículos", path: AppUtils.CARROS_PATH },
   { name: "Relatórios", path: AppUtils.RELATORIOS_PATH },
-  { name: "Estacionamento", path: AppUtils.CARROS_PATH },
   { name: "Gráficos", path: AppUtils.GRAFICOS_PATH },
 ];
 
@@ -51,10 +51,9 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" } }} />
+    <AppBar position="static" sx={{ bgcolor: "gray !important" }}>
+      <Container maxWidth="xl" sx={{ backgroundColor: "gray" }}>
+        <Toolbar disableGutters sx={{ backgroundColor: "gray" }}>
           <Typography
             variant="h6"
             noWrap
@@ -72,7 +71,13 @@ function ResponsiveAppBar() {
             GARAGE
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              backgroundColor: "gray",
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -97,7 +102,10 @@ function ResponsiveAppBar() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
+              sx={{
+                backgroundColor: "gray",
+                display: { xs: "block", md: "none" },
+              }}
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
@@ -113,7 +121,13 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <AdbIcon
+            sx={{
+              backgroundColor: "gray",
+              display: { xs: "flex", md: "none" },
+              mr: 1,
+            }}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -121,6 +135,7 @@ function ResponsiveAppBar() {
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
+              backgroundColor: "gray",
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
@@ -158,14 +173,22 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box
+            sx={{
+              backgroundColor: "gray",
+              flexGrow: 0,
+            }}
+          >
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: "45px" }}
+              sx={{
+                backgroundColor: "gray",
+                mt: "45px",
+              }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{

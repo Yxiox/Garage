@@ -16,3 +16,7 @@ body {
     text-wrap: balance;
   }
 }
+
+AppBar{
+  background-color: gray;
+}

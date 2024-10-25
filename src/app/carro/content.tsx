@@ -43,12 +43,12 @@ export default function Content({ cars, colors, models, setCars }: Props) {
   const handleCorChange = async (
     id: number,
     placa: string,
-    newCorId: number,
+    newCor: number,
     id_modelo: number,
   ) => {
     try {
       const response = await fetch(
-        `${ROUTES_CONST.CARRO}?id=${id}&placa=${placa}&id_cor=${newCorId}&id_modelo=${id_modelo}`,
+        `${ROUTES_CONST.CARRO}?id=${id}&placa=${placa}&id_cor=${newCor}&id_modelo=${id_modelo}`,
         {
           method: "PUT",
           headers: {
@@ -65,8 +65,8 @@ export default function Content({ cars, colors, models, setCars }: Props) {
         car.id === id
           ? {
               ...car,
-              id_cor: newCorId,
-              cor_nome: colors.find((cor) => cor.id === newCorId)?.nome || "",
+              id_cor: newCor,
+              cor_nome: colors.find((cor) => cor.id === newCor)?.nome || "",
             }
           : car,
       );
