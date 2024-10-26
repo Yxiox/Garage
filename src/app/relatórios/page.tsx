@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-async-client-component */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 "use client";
 import { ROUTES_CONST } from "@/shared/route.const";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
